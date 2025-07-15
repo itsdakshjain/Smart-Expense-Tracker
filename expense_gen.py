@@ -18,3 +18,10 @@ class ExpenseGenerator:
             idx = random.randint(0, len(df)-1)
             df.loc[idx, 'Amount'] = None
         return df
+
+if __name__ == '__main__':
+    gen = ExpenseGenerator()
+    df = gen.create_data()
+    df = gen.inject_errors(df)
+    df.to_csv('raw_expenses.csv', index=False)
+    print('New Class-based data generated!')
