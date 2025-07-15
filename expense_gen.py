@@ -12,3 +12,9 @@ class ExpenseGenerator:
             date = datetime(2025, 1, 1) + timedelta(days=random.randint(0, 150))
             data.append({'Date': date.strftime('%Y-%m-%d'), 'Category': random.choice(self.categories), 'Amount': round(random.uniform(10, 800), 2)})
         return pd.DataFrame(data)
+
+    def inject_errors(self, df):
+        for _ in range(15):
+            idx = random.randint(0, len(df)-1)
+            df.loc[idx, 'Amount'] = None
+        return df
