@@ -1,4 +1,6 @@
-﻿import pandas as pd
+﻿import logging
+logging.basicConfig(level=logging.INFO, format='%(message)s')
+import pandas as pd
 import random
 from datetime import datetime, timedelta
 
