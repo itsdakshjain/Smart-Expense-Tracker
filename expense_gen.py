@@ -22,11 +22,9 @@ class ExpenseGenerator:
         return df
 
     def get_stats(self, df):
-        return df.groupby('Category')['Amount'].count()
-
 if __name__ == '__main__':
+    logging.info('Starting Generation...')
     gen = ExpenseGenerator()
-    df = gen.create_data()
-    df = gen.inject_errors(df)
+    df = gen.create_data(500)
+    print(gen.get_stats(df))
     df.to_csv('raw_expenses.csv', index=False)
-    print('New Class-based data generated!')
