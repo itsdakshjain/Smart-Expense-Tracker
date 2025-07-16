@@ -21,6 +21,9 @@ class ExpenseGenerator:
             df.loc[idx, 'Amount'] = None
         return df
 
+    def get_stats(self, df):
+        return df.groupby('Category')['Amount'].count()
+
 if __name__ == '__main__':
     gen = ExpenseGenerator()
     df = gen.create_data()
