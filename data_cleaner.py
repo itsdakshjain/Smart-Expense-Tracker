@@ -18,3 +18,11 @@ def check_missing_data(dataframe):
 
 if df is not None:
     check_missing_data(df)
+
+def show_stats(dataframe):
+    print("\n--- Descriptive Statistics ---")
+    print(dataframe.describe())
+    print("\nCategory Counts:")
+    print(dataframe['Category'].value_counts())
+
+show_stats(df)
