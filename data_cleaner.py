@@ -10,3 +10,11 @@ def load_dataset(file_path):
         return None
 
 df = load_dataset('raw_expenses.csv')
+
+def check_missing_data(dataframe):
+    print("\n[SCANNING FOR MISSING VALUES]")
+    null_counts = dataframe.isnull().sum()
+    print(null_counts[null_counts > 0])
+
+if df is not None:
+    check_missing_data(df)
