@@ -35,3 +35,11 @@ def fix_missing_amounts(dataframe):
     return dataframe
 
 df = fix_missing_amounts(df)
+
+def clean_dates(dataframe):
+    print("[ACTION: Converting Date Strings]")
+    dataframe['Date'] = pd.to_datetime(dataframe['Date'])
+    dataframe = dataframe.sort_values(by='Date')
+    return dataframe
+
+df = clean_dates(df)
