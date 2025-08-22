@@ -43,3 +43,9 @@ def clean_dates(dataframe):
     return dataframe
 
 df = clean_dates(df)
+
+def finalize_precision(dataframe):
+    dataframe['Amount'] = dataframe['Amount'].round(2)
+    return dataframe
+
+df = finalize_precision(df)
