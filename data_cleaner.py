@@ -57,3 +57,5 @@ def export_data(dataframe, filename):
 export_data(df, 'cleaned_expenses.csv')
 
 print(f"\nCleaning Complete. Total Records: {len(df)}")
+
+# Phase 2 Complete. Data is ready for September visualization.
