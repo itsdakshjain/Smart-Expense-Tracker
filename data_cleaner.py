@@ -49,3 +49,9 @@ def finalize_precision(dataframe):
     return dataframe
 
 df = finalize_precision(df)
+
+def export_data(dataframe, filename):
+    dataframe.to_csv(filename, index=False)
+    print(f"\n--- SUCCESS: Saved to {filename} ---")
+
+export_data(df, 'cleaned_expenses.csv')
