@@ -26,3 +26,12 @@ def show_stats(dataframe):
     print(dataframe['Category'].value_counts())
 
 show_stats(df)
+
+def fix_missing_amounts(dataframe):
+    print("\n[ACTION: Filling Missing Amounts]")
+    avg_val = dataframe['Amount'].mean()
+    dataframe['Amount'] = dataframe['Amount'].fillna(avg_val)
+    print(f"Filled missing values with mean: {avg_val:.2f}")
+    return dataframe
+
+df = fix_missing_amounts(df)
