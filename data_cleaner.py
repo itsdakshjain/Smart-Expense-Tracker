@@ -55,3 +55,5 @@ def export_data(dataframe, filename):
     print(f"\n--- SUCCESS: Saved to {filename} ---")
 
 export_data(df, 'cleaned_expenses.csv')
+
+print(f"\nCleaning Complete. Total Records: {len(df)}")
