@@ -11,3 +11,8 @@ def load_cleaned_data(path):
     return df
 
 df = load_cleaned_data('cleaned_expenses.csv')
+
+def get_category_totals(dataframe):
+    return dataframe.groupby('Category')['Amount'].sum().sort_values(ascending=False)
+
+category_data = get_category_totals(df)
