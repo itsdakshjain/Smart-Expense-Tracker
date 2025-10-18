@@ -16,3 +16,14 @@ def get_category_totals(dataframe):
     return dataframe.groupby('Category')['Amount'].sum().sort_values(ascending=False)
 
 category_data = get_category_totals(df)
+
+def plot_spending_pie(data):
+    plt.figure(figsize=(10, 6))
+    data.plot.pie(autopct='%1.1f%%', startangle=140, colors=sns.color_palette('pastel'))
+    plt.title('Spending Distribution by Category')
+    plt.ylabel('') # Hide the y-label
+    plt.tight_layout()
+    plt.savefig('spending_pie.png')
+    print("Saved spending_pie.png")
+
+plot_spending_pie(category_data)
