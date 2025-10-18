@@ -27,3 +27,6 @@ def plot_spending_pie(data):
     print("Saved spending_pie.png")
 
 plot_spending_pie(category_data)
+
+# Quick check of top expenses
+print(category_data.head())
