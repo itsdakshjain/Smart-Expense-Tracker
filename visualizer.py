@@ -46,3 +46,9 @@ def plot_monthly_trend(data):
     plt.savefig('spending_trend.png')
 
 plot_monthly_trend(monthly_trend)
+def print_spending_report(dataframe):
+    summary = dataframe.groupby('Category').agg({'Amount': ['sum', 'mean', 'count']})
+    print("\n--- Final Spending Report ---")
+    print(summary)
+
+print_spending_report(df)
