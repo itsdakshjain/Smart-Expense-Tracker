@@ -52,3 +52,4 @@ def print_spending_report(dataframe):
     print(summary)
 
 print_spending_report(df)
+plt.rcParams.update({'font.size': 12, 'figure.facecolor': 'white'})
