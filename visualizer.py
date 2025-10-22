@@ -30,3 +30,8 @@ plot_spending_pie(category_data)
 
 # Quick check of top expenses
 print(category_data.head())
+def get_monthly_trend(dataframe):
+    monthly = dataframe.resample('M', on='Date')['Amount'].sum()
+    return monthly
+
+monthly_trend = get_monthly_trend(df)
