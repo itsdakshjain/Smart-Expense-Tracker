@@ -35,3 +35,14 @@ def get_monthly_trend(dataframe):
     return monthly
 
 monthly_trend = get_monthly_trend(df)
+def plot_monthly_trend(data):
+    plt.figure(figsize=(12, 6))
+    sns.lineplot(x=data.index, y=data.values, marker='o', linewidth=2.5)
+    plt.title('Spending Trends Over Time')
+    plt.xlabel('Month')
+    plt.ylabel('Total Spent ($)')
+    plt.grid(True, linestyle='--', alpha=0.7)
+    plt.tight_layout()
+    plt.savefig('spending_trend.png')
+
+plot_monthly_trend(monthly_trend)
