@@ -53,3 +53,5 @@ def print_spending_report(dataframe):
 
 print_spending_report(df)
 plt.rcParams.update({'font.size': 12, 'figure.facecolor': 'white'})
+if __name__ == '__main__':
+    print("Visualization processing complete. Images saved.")
