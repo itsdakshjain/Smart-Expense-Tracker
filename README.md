@@ -10,3 +10,4 @@ An end-to-end data pipeline to generate, clean, and visualize personal finance d
 ## Insights
 ![Spending Pie](spending_pie.png)
 ![Spending Trend](spending_trend.png)
+This project is complete and stable.
