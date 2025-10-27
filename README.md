@@ -1,7 +1,2 @@
-﻿## Smart Expense Tracker
-Initial project setup and data generation module.
-### July 15 Update
-- Moved to OOP structure.
-- Added error simulation.
-### July 16 Milestone
-- Logging and Summary stats completed.
+﻿# Smart Expense Tracker
+An end-to-end data pipeline to generate, clean, and visualize personal finance data.
